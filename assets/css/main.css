@@ -139,14 +139,14 @@ h6 {
   z-index: 997;
 }
 
-.header .logo {
+/* .header .logo {
   line-height: 1;
 }
 
 .header .logo img {
   max-height: 36px;
   margin-right: 8px;
-}
+} */
 
 .header .logo h1 {
   font-size: 28px;
@@ -2731,4 +2731,18 @@ section,
 
 .contact .php-email-form button[type=submit]:hover {
   background: color-mix(in srgb, #e25522, transparent 25%);
+}
+
+
+.logo {
+  display: flex;
+  justify-content: center; /* Centers logo horizontally */
+  align-items: center; /* Centers logo vertically */
+  height: 100px; /* Adjust height as needed */
+}
+
+.logo img {
+  max-width: 100%; /* Ensures logo is responsive */
+  height: 200px;
+  display: block;
 }
