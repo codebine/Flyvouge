@@ -17,6 +17,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
+   <!-- AOS Library CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -39,7 +41,6 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
@@ -68,50 +69,249 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
+  
     <section id="service-details" class="service-details section">
-
       <div class="container">
-
         <div class="row gy-4">
-
+          
+          <!-- Sidebar Navigation -->
+          
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="services-list">
-              <a href="#" class="active">Web Design</a>
-              <a href="#">Software Development</a>
-              <a href="#">Product Management</a>
-              <a href="#">Graphic Design</a>
-              <a href="#">Marketing</a>
-            </div>
+            <div class="services-list" id="service-tabs" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="tab-web-design" data-bs-toggle="pill" data-bs-target="#content-web-design" role="tab" aria-controls="content-web-design" aria-selected="true">FDAHTTM</a>
+            <a class="nav-link" id="tab-software-dev" data-bs-toggle="pill" data-bs-target="#content-software-dev" role="tab" aria-controls="content-software-dev" aria-selected="false">FDHTTCS</a>
+            <a class="nav-link" id="tab-product-mgmt" data-bs-toggle="pill" data-bs-target="#content-product-mgmt" role="tab" aria-controls="content-product-mgmt" aria-selected="false">FPGDAHTCS</a>
+            <!-- <a class="nav-link" id="tab-graphic-design" data-bs-toggle="pill" data-bs-target="#content-graphic-design" role="tab" aria-controls="content-graphic-design" aria-selected="false">Graphic Design</a>
+            <a class="nav-link" id="tab-marketing" data-bs-toggle="pill" data-bs-target="#content-marketing" role="tab" aria-controls="content-marketing" aria-selected="false">Marketing</a> -->
+          </div>
 
             <h4>Enim qui eos rerum in delectus</h4>
             <p>Nam voluptatem quasi numquam quas fugiat ex temporibus quo est. Quia aut quam quod facere ut non occaecati ut aut. Nesciunt mollitia illum tempore corrupti sed eum reiciendis. Maxime modi rerum.</p>
           </div>
-
+          
+          <!-- Tab Content -->
           <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
+            <div class="tab-content" id="service-tabs-content">
+            <div class="tab-pane fade show active" id="content-web-design" role="tabpanel" aria-labelledby="tab-web-design" data-aos="fade-up">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>FlyVouge Diploma Certificate in Aviation, Hospitality, Travel & Tourism Management</h3>
+              <p>The FlyVouge Diploma Certificate in Aviation, Hospitality, Travel & Tourism Management (FDAHTTM) is an 
+                industry-focused program designed to equip aspiring professionals with the essential skills and knowledge 
+                required to excel in the fast-paced world of aviation, hospitality, and tourism. This course, affiliated with 
+                Centurion University, offers a blend of theoretical learning and hands-on training to ensure a well-rounded 
+                education.</p>
+                <div class="mt-5">
+                  <h2>Course Overview</h2>
+                  <p>This diploma program provides comprehensive insights into key sectors, including airline operations, 
+                    customer service excellence, ground handling, hospitality management, and global tourism dynamics. The 
+                    curriculum is carefully structured to bridge the gap between academic knowledge and industry 
+                    requirements, making students job-ready from day one. </p>
+                </div>
+                <section id="aviation-course" class="aviation-course section">
+                  <div class="container">
+                    <h2 class="text-center">Aviation Course Details</h2>
+                    <p class="text-center">Duration: 6-month course, excluding Saturdays, Sundays, and 8 public holidays, with 2-hour classes per day. Total training time: <strong>240 hours</strong> (spread over 120 days).</p>
+                    
+                    <div class="row">
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Aviation Industry Fundamentals</h3>
+                        <p>Gain in-depth knowledge of airline operations, airport management, safety regulations, and passenger handling procedures.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Hospitality & Service Excellence</h3>
+                        <p>Learn the art of professional hospitality, effective communication, and customer relationship management.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Travel & Tourism Management</h3>
+                        <p>Understand international tourism trends, tour operations, travel agency management, and itinerary planning.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Soft Skills & Personality Development</h3>
+                        <p>Enhance leadership, teamwork, and problem-solving abilities tailored to the aviation and hospitality sectors.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Grooming & Professional Etiquette</h3>
+                        <p>Develop personal presentation, confidence, and behavioral skills crucial for industry success.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Practical Training & Internship</h3>
+                        <p>Get hands-on experience through practical training sessions and internships with leading organizations.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <section id="why-choose" class="why-choose section">
+                  <div class="container">
+                    <h2 class="text-center">Why Choose FDAHTTM?</h2>
+                    <div class="row">
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Industry-Oriented Curriculum</h3>
+                        <p>Designed in collaboration with professionals to meet current industry demands.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Affiliation with Centurion University</h3>
+                        <p>A well-recognized institution ensuring high academic standards.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Expert Faculty & Mentors</h3>
+                        <p>Learn from seasoned professionals with real-world experience in aviation, hospitality, and tourism.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Placement Support & Career Guidance</h3>
+                        <p>Assistance in securing job opportunities with airlines, hotels, travel agencies, and tourism companies.</p>
+                      </div>
+                      <div class="col-lg-6" data-aos="fade-up">
+                        <h3>Modern Training Facilities</h3>
+                        <p>Equipped with simulated environments to provide practical exposure to industry settings.</p>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                
+                <section id="career-opportunities" class="career-opportunities section">
+                  <div class="container">
+                    <h2 class="text-center">Career Opportunities</h2>
+                    <p class="text-center">Upon successful completion of the FDAHTTM program, graduates can explore various career paths, including:</p>
+                    <ul class="career-list" data-aos="fade-up">
+                      <li>Cabin Crew / Flight Attendant</li>
+                      <li>Airline Ground Staff</li>
+                      <li>Airport Customer Service Executive</li>
+                      <li>Travel Consultant / Tour Operator</li>
+                      <li>Hospitality Manager / Guest Relations Executive</li>
+                      <li>Event & Tourism Coordinator</li>
+                      <li>Cruise Line Executive</li>
+                    </ul>
+                    <p class="text-center">This diploma program is the gateway to an exciting career in aviation, hospitality, and travel. With the right training, expert guidance, and industry exposure, students can embark on a journey filled with limitless opportunities and global career prospects.</p>
+                  </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="content-software-dev" role="tabpanel" aria-labelledby="tab-software-dev" data-aos="fade-up">
+              <!-- <img src="assets/img/services.jpg" alt="" class="img-fluid services-img"> -->
+              <h3>FLYVOUGE Diploma Certificate in Hospitality, Travel, Tourism & Customer Service</h3>
+              <p>The FLYVOUGE Diploma Certificate in Hospitality, Travel, Tourism & Customer Service (FDHTTCS) is a 
+                comprehensive 12-month program designed to equip students with specialized skills and knowledge 
+                essential for excelling in the dynamic service industry. Developed in collaboration with Centurion 
+                University, this program blends theoretical understanding with practical industry exposure to prepare 
+                individuals for rewarding careers in hospitality, travel, tourism, and customer service.</p>
+                <div class="mt-5">
+                  <h2>Program Overview</h2>
+                  <p>The course is structured to provide an in-depth foundation in global hospitality standards, travel 
+                    operations, tourism management, and customer service excellence. It is tailored for individuals aspiring to 
+                    build careers in airlines, hotels, resorts, travel agencies, and tourism enterprises, where service quality and 
+                    professionalism play a crucial role. </p>
+                </div>
+                <section id="key-learning-outcomes" class="key-learning-outcomes section">
+                  <div class="container">
+                    <h2 class="text-center">Key Learning Outcomes</h2>
+                    <ul class="learning-list" data-aos="fade-up">
+                      <li>Develop a strong understanding of hospitality operations, including front office management, housekeeping, and food & beverage services.</li>
+                      <li>Gain expertise in travel and tourism, covering global tourism trends, travel planning, ticketing, and destination management.</li>
+                      <li>Master the principles of customer service excellence, focusing on communication skills, guest handling, and conflict resolution.</li>
+                      <li>Learn about travel technology and digital tourism, including online booking systems, itinerary planning, and tourism marketing.</li>
+                      <li>Acquire knowledge in airport and airline service protocols, including ground handling, security procedures, and service etiquette.</li>
+                      <li>Enhance grooming, professional etiquette, and personality development to meet global industry standards.</li>
+                    </ul>
+                  </div>
+                </section>
+                
+                <section id="course-structure" class="course-structure section">
+                  <div class="container">
+                    <h2 class="text-center">Course Structure & Learning Approach</h2>
+                    <p class="text-center">Duration: 12-month training duration, excluding weekends and public holidays, with 2-hour classes per day. Total effective training hours: <strong>498 hours</strong>.</p>
+                    <ul class="structure-list" data-aos="fade-up">
+                      <li><strong>Learning Mode:</strong> Classroom training, workshops, live demonstrations, and hands-on practical sessions.</li>
+                      <li><strong>Industry Exposure:</strong> Guest lectures, field visits, industry projects, and case studies to bridge academic learning with real-world applications.</li>
+                      <li><strong>Skill Development:</strong> Communication, leadership, and service-oriented professionalism to enhance employability.</li>
+                    </ul>
+                  </div>
+                </section>
+                
+                <section id="career-opportunities" class="career-opportunities section">
+                  <div class="container">
+                    <h2 class="text-center">Career Opportunities</h2>
+                    <p class="text-center">Upon successful completion, candidates can explore opportunities in various sectors, including:</p>
+                    <ul class="career-list" data-aos="fade-up">
+                      <li>Hotels & Resorts – Front Office, Housekeeping, Guest Relations, Event Management</li>
+                      <li>Airline Industry – Cabin Crew, Customer Support, Ground Handling, Ticketing</li>
+                      <li>Travel & Tourism Agencies – Itinerary Planning, Destination Management, Tour Coordination</li>
+                      <li>Cruise Liners & Luxury Hospitality – Guest Services, Concierge, Sales & Marketing</li>
+                      <li>Retail & Corporate Customer Service – High-end customer interaction and service roles</li>
+                    </ul>
+                    <p class="text-center">The FDHTTCS program is an excellent stepping stone for individuals passionate about delivering exceptional guest experiences and seeking career growth in the global hospitality and tourism landscape.</p>
+                  </div>
+                </section>
+            </div>
+            <div class="tab-pane fade" id="content-product-mgmt" role="tabpanel" aria-labelledby="tab-product-mgmt" data-aos="fade-up">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>FLYVOUGE Post Graduate Diploma Certificate in Aviation, Hospitality, Travel & Tourism Management</h3>
+              <p>The FLYVOUGE Post Graduate Diploma Certificate in Aviation, Hospitality, Travel & Tourism 
+                Management (FPGDAHTCS) is an intensive 6-month program designed to equip aspiring professionals with 
+                industry-relevant skills and expertise required in the fast-paced world of aviation, hospitality, travel, and 
+                tourism. This exclusive program, in collaboration with Centurion University, provides a comprehensive 
+                learning experience, blending theoretical insights with practical applications to meet global industry 
+                standards. </p>
+                <div class="mt-5">
+                  <h2>Program Overview:</h2>
+                  <p>This diploma course is structured to provide in-depth knowledge and hands-on exposure to the four core 
+                    domains—Aviation, Hospitality, Travel, and Tourism. It is tailored for individuals seeking dynamic career 
+                    opportunities in airlines, airport operations, luxury hospitality, travel agencies, tourism boards, and 
+                    international service sectors.</p>
+                </div>
+                <section id="fpgdahtcs-course" class="fpgdahtcs-course section" style="background-color: #f8f9fa;">
+                  <div class="container">
+                    <h2 class="text-center" style="color: #e25522;">Key Learning Objectives</h2>
+                    <ul class="learning-list" data-aos="fade-up">
+                      <li>Develop an understanding of aviation operations, airline management, customer service protocols, and safety regulations.</li>
+                      <li>Gain expertise in hospitality management, covering front office operations, food & beverage services, and luxury service excellence.</li>
+                      <li>Master travel & tourism management, including ticketing, itinerary planning, global tourism trends, and digital tourism platforms.</li>
+                      <li>Learn the fundamentals of airport ground services, security procedures, and crisis management.</li>
+                      <li>Enhance communication skills, professional grooming, and leadership abilities required for global career opportunities.</li>
+                    </ul>
+                  </div>
+                </section>
+                
+                <section id="course-structure" class="course-structure section" style="background-color: #ffffff;">
+                  <div class="container">
+                    <h2 class="text-center" style="color: #e25522;">Course Structure & Delivery</h2>
+                    <p class="text-center">Duration: 6-month course, excluding Saturdays, Sundays, and 8 public holidays, with 2-hour classes per day. Total training time: <strong>240 hours</strong> (spread over 120 days).</p>
+                    <ul class="structure-list" data-aos="fade-up">
+                      <li><strong>Mode of Learning:</strong> Classroom training, workshops, industry exposure, and skill development sessions.</li>
+                      <li><strong>Industry Connect:</strong> Guest lectures, airline and hotel visits, and hands-on experience through internships and simulation-based learning.</li>
+                      <li><strong>Skill Enhancement:</strong> Personality development, interview preparation, and soft skills training.</li>
+                    </ul>
+                  </div>
+                </section>
+                
+                <section id="career-prospects" class="career-prospects section" style="background-color: #f8f9fa;">
+                  <div class="container">
+                    <h2 class="text-center" style="color: #e25522;">Career Prospects</h2>
+                    <p class="text-center">Upon successful completion, candidates can explore job opportunities in:</p>
+                    <ul class="career-list" data-aos="fade-up">
+                      <li>Airlines (Cabin Crew, Ground Staff, Customer Service, Ticketing)</li>
+                      <li>Airports (Operations, Security, Retail & Lounge Management)</li>
+                      <li>Luxury Hotels & Resorts (Front Office, Guest Relations, Event Management)</li>
+                      <li>Travel Agencies & Tour Operators (Itinerary Designing, Destination Management)</li>
+                      <li>Cruise Liners & International Hospitality Brands</li>
+                    </ul>
+                    <p class="text-center">The FPGDAHTCS course is an ideal platform for individuals aiming to build a rewarding career in the aviation and tourism industry while gaining a globally recognized certification.</p>
+                  </div>
+                </section>
+            </div>
+            <!-- <div class="tab-pane fade" id="content-graphic-design" role="tabpanel" aria-labelledby="tab-graphic-design" data-aos="fade-up">
+              <h3>Graphic Design</h3>
+              <p>Creating stunning visuals that enhance brand identity and engagement.</p>
+            </div>
+            <div class="tab-pane fade" id="content-marketing" role="tabpanel" aria-labelledby="tab-marketing" data-aos="fade-up">
+              <h3>Marketing</h3>
+              <p>Innovative strategies to drive traffic and boost conversions.</p>
+            </div> -->
           </div>
-
+          </div>
+          
         </div>
-
       </div>
-
-    </section><!-- /Service Details Section -->
+    </section>
+    
 
   </main>
 
@@ -198,7 +398,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
+    });
+  </script>
+  
 </body>
 
 </html>
