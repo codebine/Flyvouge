@@ -735,6 +735,19 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var navbar = document.querySelector(".navbar-custom");
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  });
+</script>
 
 </body>
 
