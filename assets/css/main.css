@@ -2890,3 +2890,54 @@ section,
   border-color: rgba(0, 0, 0, .08);
   box-shadow: none;
 }
+
+/* Form  */
+        /* Styling for form section */
+        .bgblack {
+          color: white;
+          padding: 50px 0;
+          text-align: center;
+      }
+
+      .form-container {
+          background: #0a2351;
+          padding: 40px;
+          border-radius: 10px;
+      }
+
+      .form-row {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 20px;
+      }
+
+      .customForm {
+          flex: 1;
+          min-width: 200px;
+      }
+
+      .form-control, select {
+          border-radius: 5px;
+          padding: 10px;
+          width: 100%;
+      }
+
+      .malefiea {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+      }
+
+      .submitfor {
+          width: auto;
+          background: #0a2351;
+          border: none;
+          color: #e25522;
+          font-size: 18px;
+          padding: 12px 30px;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+/* Form  */
