@@ -453,8 +453,8 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color:#fff;
+  background-color: #2C3E50;
   font-size: 14px;
   position: relative;
 }
@@ -494,9 +494,9 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, #fff, transparent 50%);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, #fff, transparent 30%);
   margin-right: 10px;
   transition: 0.3s;
 }
@@ -540,7 +540,7 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color:#fff;
   display: inline-block;
   line-height: 1;
 }
