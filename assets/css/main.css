@@ -2957,3 +2957,86 @@ section,
           cursor: pointer;
       }
 /* Form  */
+.course-structure .container {
+  text-align: center;
+  max-width: 900px; /* Adjusts width for better readability */
+  margin: auto;
+}
+
+.structure-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the list */
+  gap: 15px;
+  padding: 0;
+}
+
+.structure-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fa; /* Light background for better visibility */
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%; /* Ensures even width */
+  max-width: 600px; /* Limits width for balance */
+  font-size: 18px;
+  text-align: left;
+}
+.career-opportunities .container {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.career-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 0;
+}
+
+.career-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f8f9fa; /* Light background */
+  padding: 12px 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  font-size: 18px;
+  text-align: left;
+}
+.features .container {
+  /* text-align: center; */
+  max-width: 900px;
+  margin: auto;
+}
+
+.nav-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.nav-tabs .nav-link {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: left;
+  width: 100%;
+}
+
+.tab-content {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 10px;
+}
+
+.tab-content h3 {
+  margin-bottom: 10px;
+}
+
