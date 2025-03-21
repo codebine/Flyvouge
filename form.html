@@ -9,7 +9,7 @@
 
     <!-- Favicons -->
     <link href="assets/img/Flyvouge.png" rel="icon">
-  <link href="assets/img/Flyvouge.png" rel="icon">
+    <link href="assets/img/Flyvouge.png" rel="icon">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -32,13 +32,34 @@
 
 </head>
 <style>
-    .form-container {
-        max-width: 600px;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
+     body {
+            background-color: #f8f9fa; /* Light grey background */
+        }
+
+        .container {
+            min-height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px 15px; /* Top and bottom spacing */
+        }
+
+        .form-container {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px; /* Responsive width */
+        }
+
+        h3 {
+            margin-bottom: 20px;
+        }
+
+        button {
+            margin-top: 15px;
+        }
 </style>
 
 <body>
@@ -81,11 +102,12 @@
             </div>
         </div> -->
         <!-- End Page Title -->
-        <div class="container d-flex justify-content-center align-items-center vh-100">
+         
+        <div class="container">
             <div class="form-container">
-                <h3 class="text-center mb-4">FlyVouge Course Application</h3>
-                <form action="#" method="post">
-
+                <h3 class="text-center">FlyVouge Course Application</h3>
+                <form id="applicationEnquiryForm" method="post">
+        
                     <!-- Select Application or Inquiry -->
                     <div class="mb-3">
                         <label class="form-label">Select Type:</label>
@@ -95,52 +117,48 @@
                             <option value="enquire">Enquire About Course</option>
                         </select>
                     </div>
-
+        
                     <!-- Name Field -->
                     <div class="mb-3">
                         <label class="form-label">Full Name:</label>
                         <input type="text" class="form-control" name="full_name" required placeholder="Enter your name">
                     </div>
-
+        
                     <!-- Email Field -->
                     <div class="mb-3">
                         <label class="form-label">Email:</label>
                         <input type="email" class="form-control" name="email" required placeholder="Enter your email">
                     </div>
-
+        
                     <!-- Phone Number -->
                     <div class="mb-3">
                         <label class="form-label">Phone Number:</label>
-                        <input type="tel" class="form-control" name="phone" required
-                            placeholder="Enter your phone number">
+                        <input type="tel" class="form-control" name="phone" required placeholder="Enter your phone number">
                     </div>
-
+        
                     <!-- Course Selection -->
                     <div class="mb-3">
                         <label class="form-label">Select Course:</label>
                         <select class="form-select" name="course" required>
                             <option value="" disabled selected>Choose a course</option>
-                            <option value="FDAHTTM">FlyVouge Diploma in Aviation, Hospitality, Travel & Tourism
-                                Management (FDAHTTM)</option>
-                            <option value="FDHTTCS">FlyVouge Diploma in Hospitality, Travel, Tourism & Customer Service
-                                (FDHTTCS)</option>
-                            <option value="FPGDAHTCS">FlyVouge Post Graduate Diploma in Aviation, Hospitality, Travel &
-                                Tourism Management (FPGDAHTCS)</option>
+                            <option value="FDAHTTM">FlyVouge Diploma in Aviation, Hospitality, Travel & Tourism Management (FDAHTTM)</option>
+                            <option value="FDHTTCS">FlyVouge Diploma in Hospitality, Travel, Tourism & Customer Service (FDHTTCS)</option>
+                            <option value="FPGDAHTCS">FlyVouge Post Graduate Diploma in Aviation, Hospitality, Travel & Tourism Management (FPGDAHTCS)</option>
                         </select>
                     </div>
-
+        
                     <!-- Message Box -->
                     <div class="mb-3">
                         <label class="form-label">Message (Optional):</label>
-                        <textarea class="form-control" name="message" rows="3"
-                            placeholder="Any additional information or questions"></textarea>
+                        <textarea class="form-control" name="message" rows="3" placeholder="Any additional information or questions"></textarea>
                     </div>
-
+        
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary w-100">Submit</button>
                 </form>
             </div>
         </div>
+        
     </main>
 
     <footer id="footer" class="footer" style="padding: 40px 0; background-color: #2C3E50; color: #fff;">
@@ -218,7 +236,73 @@
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("applicationEnquiryForm");
+            const messageDiv = document.createElement("div");
+            messageDiv.id = "responseMessage";
+            messageDiv.style.marginTop = "15px";
+            form.appendChild(messageDiv);
 
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+                messageDiv.innerHTML = "";
+
+                let isValid = true;
+
+                // Validate required fields
+                form.querySelectorAll("[required]").forEach(input => {
+                    if (!input.value.trim()) {
+                        isValid = false;
+                        input.classList.add("is-invalid");
+                        if (!input.nextElementSibling || !input.nextElementSibling.classList.contains("invalid-feedback")) {
+                            const errorDiv = document.createElement("div");
+                            errorDiv.className = "invalid-feedback";
+                            errorDiv.innerText = "This field is required.";
+                            input.parentNode.appendChild(errorDiv);
+                        }
+                    } else {
+                        input.classList.remove("is-invalid");
+                        if (input.nextElementSibling && input.nextElementSibling.classList.contains("invalid-feedback")) {
+                            input.nextElementSibling.remove();
+                        }
+                    }
+                });
+
+                if (!isValid) {
+                    messageDiv.innerHTML = '<div class="alert alert-warning">⚠️ Please fill out all required fields.</div>';
+                    return;
+                }
+
+                let formData = new FormData(form);
+
+                fetch("http://127.0.0.1:5000/submit-application-enquiry", {
+                    method: "POST",
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            messageDiv.innerHTML = `<div class="alert alert-success">✅ Form Submitted Successfully!</div>`;
+
+                            // Hide success message after 3 seconds
+                            setTimeout(() => {
+                                messageDiv.innerHTML = "";
+                            }, 3000);
+
+                            form.reset();
+                        } else {
+                            messageDiv.innerHTML = `<div class="alert alert-danger">❌ Error: ${data.message}</div>`;
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Submission Error:", error);
+                        messageDiv.innerHTML = `<div class="alert alert-danger">❌ Error submitting form. Please try again.</div>`;
+                    });
+            });
+        });
+
+    </script>
 </body>
 
 </html>
