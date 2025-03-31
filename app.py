@@ -18,9 +18,9 @@ JOB_APPLICATIONS_FILE = "job_applications.xlsx"
 ENQUIRY_FILE = "enquiries.xlsx"
 
 # Email Configuration
-SENDER_EMAIL = "varshith.sunbright@gmail.com"
-SENDER_PASSWORD = "umqdsmvhcnlcxckj"  # Use an App Password instead of your Gmail password
-RECIPIENT_EMAIL = "saivarshith.nomuluri@gmail.com"
+SENDER_EMAIL = "flyvougevsp@gmail.com"
+SENDER_PASSWORD = "ofznhceszumlwxnp"  # Use an App Password instead of your Gmail password
+RECIPIENT_EMAIL = "info@flyvouge.com"
 
 # ----------------------- Contact Form Submission -----------------------
 @app.route("/submit-contact-form", methods=["POST"])
